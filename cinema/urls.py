@@ -16,8 +16,8 @@ from cinema.views import (
 
 
 router = routers.DefaultRouter()
-router.register(r"movies", MovieViewSet)
-router.register(r"cinema-halls", CinemaHallViewSet)
+router.register(r"movies", MovieViewSet, basename="movie")
+router.register(r"cinema-halls", CinemaHallViewSet, basename="cinema-hall")
 
 urlpatterns = [
     path("genres/", GenreList.as_view(), name="genre-list"),
